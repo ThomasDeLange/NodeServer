@@ -38,8 +38,8 @@ app.use((err, req, res, next) => {
 
 let port = process.env.PORT || 3000
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log("De server draait en luistert op poort: " + this.address().port);
+app.listen(port, () => {
+	console.log("De server draait en luistert op poort: " + port);
 })
 
 module.exports = app
