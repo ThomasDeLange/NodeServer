@@ -5,7 +5,6 @@ let bodyParser = require('body-parser')
 let personRoutes = require('./routes/personRoutes')
 let greetingRoutes = require('./routes/greetingRoutes')
 
-let port = process.env.PORT || 3000
 
 var app = express()
 app.use(morgan('dev'))
@@ -36,8 +35,11 @@ app.use((err, req, res, next) => {
 	res.status(404).json(err).end()
 })
 
-app.listen(port, () => {
-	console.log("De server draait en luistert op poort: " + port);
+
+let port = process.env.PORT || 3000
+
+app.listen(process.env.PORT || 3000, () => {
+	console.log("De server draait en luistert op poort: " + this.address().port);
 })
 
 module.exports = app
