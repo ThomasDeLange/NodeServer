@@ -1,6 +1,7 @@
 //Crud operaties voor Persons
 
 let Person = require('../Model/Person')
+let bodyParser = require('body-parser')
 
 module.exports = {
 

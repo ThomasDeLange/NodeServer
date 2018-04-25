@@ -1,13 +1,16 @@
 let express = require('express')
 let morgan = require('morgan')
 let bodyParser = require('body-parser')
-
 let personRoutes = require('./routes/personRoutes')
 let greetingRoutes = require('./routes/greetingRoutes')
 
+let app = express()
 
-var app = express()
-app.use(morgan('dev'))
+// bodyParser zorgt dat we de body uit een request kunnen gebruiken,
+app.use(bodyParser.json());
+
+// Installeer Morgan als logger
+app.use(morgan('dev'));
 
 app.use('*', (req, res, next) =>{
 
