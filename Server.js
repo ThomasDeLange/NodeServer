@@ -37,8 +37,6 @@ app.use((err, req, res, next) => {
 
 	res.status(404).json(err).end()
 })
-
-
 let port = process.env.PORT || 3000
 
 app.listen(port, () => {
