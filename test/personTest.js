@@ -24,8 +24,6 @@ describe('Person', () => {
                 res.should.have.status(404);
                 res.body.should.be.a('object');
                 done();
-            })
-
-            
+            })  
     });
 });

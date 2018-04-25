@@ -31,6 +31,8 @@ app.use('*', (req, res, next) =>{
 	next(message)
 })
 
+
+
 app.use((err, req, res, next) => {
 	console.log("Catch-all error handler was called")
 	console.log(err)
